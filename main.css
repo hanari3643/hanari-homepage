@@ -1,0 +1,169 @@
+/* --- CSSリセットと基本スタイル --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  line-height: 1.8;
+  padding: 40px 20px;
+}
+
+/* ヘッダー */
+/* ヘッダー（背景画像付き） */
+header {
+  background-image: url("https://game-materials.com/wp-content/uploads/2023/11/black-marble-texture3-1536x864.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+/* セクション */
+section {
+  background-color: rgba(0, 0, 0, 0.6);  /* 半透明の黒で背景を少し暗く */
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 60px;
+
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Worksカードレイアウト */
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.work-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-item a {
+  color: #483b03;  /* アクセントカラー（落ち着いた黄色） */
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.work-item img {
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.work-item h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.work-item p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+
+
+/* ナビゲーションリンクスタイル */
+nav a {
+  text-decoration: none;
+  color: #fff; /* 白に変更 */
+  position: relative;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff; /* 白に変更 */
+  transition: width 0.3s ease;
+}
+
+
+nav a:hover {
+  opacity: 0.6;
+}
+
+/* 背景を暗くするオーバーレイ */
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* テキストが画像の上に表示されるように */
+header h1,
+header nav {
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  background-image: url("https://images.unsplash.com/photo-1579492450119-80542d516179?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 40px 20px;
+  color: #fff;
+}
